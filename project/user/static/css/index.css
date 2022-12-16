@@ -1,0 +1,85 @@
+.navbar{
+    height:20%;
+    background-color:#FFC580 ;
+  }
+  .navi{
+    width: 100%;
+     margin-top: 0;
+  
+  
+  }
+  .heading{
+    height: 5%;
+    text-align: center;
+    background-color: #5F9EA0;
+  }
+  body{
+    background-color: #FAEFE0;
+    
+  }
+
+  #button{
+    margin-left: 10%;
+    margin-top: 30%;
+  }
+  body {
+    background-image: url("{% static 'images/homeimage.jpeg' %}");
+    
+    align-items: center;
+  }
+.follow-widget {
+    text-align: center;
+    width: 90%;
+    margin: 50px auto;
+    display: table;
+    border: 1px solid #ddd;
+    padding: 10px 10px 20px;
+    border-radius: 10px;
+}
+.follow-widget h2 {
+    border-bottom: 1px solid #ddd;
+    padding: 0px 0px 25px;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+.follow-widget ul{
+    padding: 0px;
+    margin: 0px;
+}
+.follow-widget li {
+    float: left;
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0px 10px;
+    width: 16.666%;
+}
+.follow-widget li a i {
+    background-color: #f1f1f1;
+    color: #fff;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    line-height: 43px !important;
+}
+.follow-widget li a i:hover{
+    opacity: 0.8;
+}
+.follow-widget li a i.fa.fa-facebook {
+    background-color: #3b5997;
+}
+.follow-widget li a i.fa.fa-twitter {
+    background-color: #57aced;
+}
+.follow-widget li a i.fa.fa-pinterest-p {
+    background-color: #cb2026;
+}
+.follow-widget li a i.fa.fa-instagram {
+    background-color: #3e729a;
+}
+.follow-widget li a i.fa.fa-google-plus {
+    background-color: #db4d41;
+}
+.follow-widget li a i.fa.fa-youtube-play {
+    background-color: #c42f2b;
+}  
