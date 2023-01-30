@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
+PASSWORD=os.getenv('PASSWORD')
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -86,8 +89,8 @@ DATABASES = {
     'contactus': {
             'ENGINE': 'django.db.backends.mysql',  
             'NAME': 'chillmaadi',  
-            'USER':'root',  
-            'PASSWORD':'abdul786',  
+            'USER':'abbas',  
+            'PASSWORD':PASSWORD,  
             'HOST':'localhost',  
             'PORT':'3306',
             

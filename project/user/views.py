@@ -59,41 +59,35 @@ def Login(request):
 	return render(request, 'user/login.html', {'form':form, 'title':'log in'})
 
 def news(request):
-      url = 'https://newsapi.org/v2/everything?q=mentalhealth&sortBy=popularity&apiKey=e21c28ebd4ff471e970182ebc9da81fd'
-      latest_news = requests.get(url).json()
-      a = latest_news['articles']
-      desc =[]
-      title =[]
-      img =[]
-      for i in range(len(a)):
-            f = a[i]
-            title.append(f['title'])
-            desc.append(f['description'])
-            img.append(f['urlToImage'])
-      mylist = zip(title, desc, img)
-      context = {'mylist': mylist}
-      return render(request, 'News\index4.html', context)
-def contactus(request):
-    form= FormContactForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-  
-    context= {'form': form }
-        
-    
-    
-        
-    
-     
-        
-    return render(request, 'contact.html', {'form':form})
+    url = 'https://newsapi.org/v2/everything?q=mentalhealth&sortBy=popularity&apiKey=e21c28ebd4ff471e970182ebc9da81fd'
+    latest_news = requests.get(url).json()
+    a = latest_news['articles']
+    desc =[]
+    title =[]
+    img =[]
+    for i in range(len(a)):
+        f = a[i]
+        title.append(f['title'])
+        desc.append(f['description'])
+        img.append(f['urlToImage'])
+    mylist = zip(title, desc, img)
+    context = {'mylist': mylist}
+    return render(request, 'News\index4.html', context)
+
+	
 def homepage(request):
-      
-      
-      return render(request,'index.html')
-
-
+	
+    return render(request,'index.html')
 def maps(request):
       
-      return render(request,'maps.html')
+    return render(request,'maps.html')
+def contactus(request):
+	form= FormContactForm(request.POST or None)
+	if form.is_valid():
+		form.save()
+	context= {'form': form }
+	return render(request, 'contact.html', context)
+
+        
+   
 
